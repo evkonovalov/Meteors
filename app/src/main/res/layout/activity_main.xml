@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:screenOrientation="landscape"
+    android:configChanges="keyboardHidden|orientation|screenSize"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="71dp">
+
+        <com.example.cyberogg.samsungproject.GameView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.example.cyberogg.samsungproject.GameView>
+
+        <FrameLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <io.github.controlwear.virtual.joystick.android.JoystickView xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/joystick"
+                android:layout_width="172dp"
+                android:layout_height="160dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom|left"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginBottom="0dp"
+                android:alpha="0.5"
+                custom:JV_backgroundColor="@android:color/black"
+                custom:JV_borderColor="@android:color/white"
+                custom:JV_borderWidth="8dp"
+                custom:JV_buttonColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/restart"
+                android:layout_width="124dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:background="@android:color/white"
+                android:text="Restart"
+                android:textColor="@android:color/black"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/exit"
+                android:layout_width="124dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="140dp"
+                android:background="@android:color/white"
+                android:text="Exit"
+                android:textColor="@android:color/black"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/shoot"
+                android:layout_width="wrap_content"
+                android:layout_height="79dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="1dp"
+                android:alpha="0.5"
+                android:background="@android:color/white"
+                android:text="Shoot"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="770dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:text="Score: 0"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/highscore"
+                android:layout_width="770dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="0dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="High Score: 0"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/gameover"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="80dp"
+                android:gravity="center"
+                android:text="GAME OVER"
+                android:textColor="@android:color/white"
+                android:textSize="36sp"
+                android:visibility="gone" />
+
+        </FrameLayout>
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>
