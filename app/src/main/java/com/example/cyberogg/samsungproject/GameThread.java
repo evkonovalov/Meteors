@@ -276,7 +276,7 @@ public class GameThread extends Activity implements Runnable {
                                 @Override
                                 public void run() {
                                     main.highscorelabel.setText(main.getString(
-                                            R.string.high_score) + " " + GameContent.score);
+                                            R.string.high_score) + " " + h);
                                     main.restart.setVisibility(View.VISIBLE);
                                     main.golabel.setVisibility(View.VISIBLE);
                                     main.exit.setVisibility(View.VISIBLE);
